@@ -12,6 +12,31 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
+        arr = []
+        for i in range(len(nums1)):
+            greatest = -1
+            found = False
+            for j in range(len(nums2)):
+
+                if(nums2[j] == nums1[i]):
+                    found = True
+                if(found):
+                    if (nums2[j] <= nums1[i]):
+                        continue
+                    greatest = nums2[j]
+                    break
+                else:
+                    continue
+            arr.append(greatest)
+        
+        return arr
+
+
+            
+
+            
+
+            
         
 # @lc code=end
 
